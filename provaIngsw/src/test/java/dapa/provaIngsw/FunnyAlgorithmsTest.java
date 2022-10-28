@@ -1,20 +1,26 @@
 package dapa.provaIngsw;
 
+import org.joda.time.DateTime;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import org.junit.Before;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+
 
 /**
  * Unit test for simple App.
  */
-public class FunnyAlgorithmsTest 
-    extends TestCase
+
+public class FunnyAlgorithmsTest extends TestCase
 {
     /**
      * Create the test case
      *
      * @param testName name of the test case
      */
+	
     public FunnyAlgorithmsTest( String testName )
     {
         super( testName );
@@ -35,4 +41,18 @@ public class FunnyAlgorithmsTest
     {
         assertTrue( true );
     }
+    
+    @BeforeClass
+    public static void start() {
+    	DateTime time = DateTime.now();
+    	System.out.println("Start: " + time);
+    }
+    
+    @AfterClass
+    public static void end() {
+    	DateTime time = DateTime.now();
+    	System.out.println("End: " + time);
+    }
+    
 }
+
